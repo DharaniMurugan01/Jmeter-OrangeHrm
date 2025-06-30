@@ -34,7 +34,7 @@
         <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
       </CookieManager>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Time" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Time" enabled="false">
         <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -49,17 +49,17 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="users" elementType="Argument">
               <stringProp name="Argument.name">users</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="loop" elementType="Argument">
               <stringProp name="Argument.name">loop</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="rampup" elementType="Argument">
               <stringProp name="Argument.name">rampup</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -67,17 +67,17 @@
         <hashTree/>
         <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller"/>
         <hashTree>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Login-Include Controller">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Login-Include Controller" enabled="true">
             <stringProp name="IncludeController.includepath">E:\Jmeter-Final\jmeter-project\LoginFragment.jmx</stringProp>
           </IncludeController>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Time">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Time" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewTimeModule-133">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewTimeModule-133" enabled="true">
             <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
@@ -92,7 +92,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="Sec-Fetch-Mode" elementType="Header">
                   <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -150,7 +150,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewEmployeeTimesheet-135">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewEmployeeTimesheet-135" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -221,7 +221,7 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="url-check">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="url-check" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1460995400">https://opensource-demo.orangehrmlive.com/web/index.php/time/viewEmployeeTimesheet</stringProp>
               </collectionProp>
@@ -232,13 +232,13 @@
               <stringProp name="Assertion.scope">all</stringProp>
             </ResponseAssertion>
             <hashTree/>
-            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer">
+            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
               <stringProp name="ConstantTimer.delay">300</stringProp>
               <stringProp name="RandomTimer.range">100.0</stringProp>
             </GaussianRandomTimer>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-136">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-136" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -310,7 +310,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-137">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-137" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -374,7 +374,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/employees/timesheets/list-138">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/employees/timesheets/list-138" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -463,12 +463,12 @@
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer">
+          <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
             <stringProp name="ConstantTimer.delay">300</stringProp>
             <stringProp name="RandomTimer.range">100.0</stringProp>
           </GaussianRandomTimer>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewProjects-140">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewProjects-140" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -482,7 +482,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="Sec-Fetch-Mode" elementType="Header">
                   <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -539,7 +539,7 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-934052710">Projects</stringProp>
               </collectionProp>
@@ -551,7 +551,7 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-141">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-141" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -792,12 +792,12 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Add">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Add" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/saveProject-146">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/saveProject-146" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -868,12 +868,12 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer">
+            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
               <stringProp name="ConstantTimer.delay">500</stringProp>
               <stringProp name="RandomTimer.range">100</stringProp>
             </GaussianRandomTimer>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -884,7 +884,7 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-147">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-147" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -956,7 +956,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-149">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-149" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -970,7 +970,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="Sec-Fetch-Mode" elementType="Header">
                   <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -1021,17 +1021,17 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Save">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Save" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer">
+          <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
             <stringProp name="ConstantTimer.delay">300</stringProp>
             <stringProp name="RandomTimer.range">100</stringProp>
           </GaussianRandomTimer>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-151">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-151" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1053,7 +1053,7 @@
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="Sec-Fetch-Mode" elementType="Header">
                   <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -1103,7 +1103,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-152">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-152" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1175,7 +1175,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/customer-name-153">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/customer-name-153" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1246,7 +1246,7 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor">
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
@@ -1256,7 +1256,7 @@ vars.put(&quot;customerName&quot;, &quot;Customer1_&quot; + timestamp)</stringPr
             </JSR223PreProcessor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/customer-name-154">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/customer-name-154" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1328,7 +1328,7 @@ vars.put(&quot;customerName&quot;, &quot;Customer1_&quot; + timestamp)</stringPr
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/customers-155">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/customers-155" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1413,7 +1413,7 @@ vars.put(&quot;customerName&quot;, &quot;Customer1_&quot; + timestamp)</stringPr
             </JSONPostProcessor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/project-admins-156">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/project-admins-156" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1528,7 +1528,7 @@ Match[10][1]=116</stringProp>
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/project-admins-158">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/project-admins-158" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1611,7 +1611,7 @@ Match[10][1]=116</stringProp>
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-159">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-159" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1690,7 +1690,7 @@ Match[10][1]=116</stringProp>
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-160">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-160" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1774,7 +1774,7 @@ Match[10][1]=116</stringProp>
               <stringProp name="JSONPostProcessor.defaultValues">project id not found</stringProp>
             </JSONPostProcessor>
             <hashTree/>
-            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor">
+            <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
               <stringProp name="scriptLanguage">groovy</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
@@ -1797,7 +1797,7 @@ if (total &gt;= 2) {
             </JSR223PreProcessor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/saveProject/14-162">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/saveProject/14-162" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1865,7 +1865,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-163">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-163" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1937,7 +1937,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-164">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-164" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2001,7 +2001,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects/14-165">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects/14-165" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2073,7 +2073,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/project/14/activities-166">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/project/14/activities-166" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2156,7 +2156,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-168">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-168" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2243,12 +2243,12 @@ if (total &gt;= 2) {
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Confirm_Save">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Confirm_Save" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-169">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-169" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2334,7 +2334,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects/14-170">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects/14-170" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2354,7 +2354,7 @@ if (total &gt;= 2) {
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="Sec-Fetch-Mode" elementType="Header">
                   <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -2411,13 +2411,13 @@ if (total &gt;= 2) {
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer">
+            <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
               <stringProp name="ConstantTimer.delay">1000</stringProp>
               <stringProp name="RandomTimer.range">300.0</stringProp>
             </GaussianRandomTimer>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewProjects-171">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewProjects-171" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2485,7 +2485,7 @@ if (total &gt;= 2) {
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-934052710">Projects</stringProp>
               </collectionProp>
@@ -2496,7 +2496,7 @@ if (total &gt;= 2) {
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-172">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-172" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2568,7 +2568,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-173">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-173" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2672,7 +2672,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-174">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-174" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2742,7 +2742,7 @@ if (total &gt;= 2) {
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-175">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-175" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2831,7 +2831,7 @@ if (total &gt;= 2) {
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion">
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
               <stringProp name="JSON_PATH">$.data[0].name</stringProp>
               <stringProp name="EXPECTED_VALUE">Hostal management system</stringProp>
               <boolProp name="JSONVALIDATION">false</boolProp>
@@ -2841,7 +2841,7 @@ if (total &gt;= 2) {
             </JSONPathAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-176">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-176" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -2931,7 +2931,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-177">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-177" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3042,7 +3042,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/saveProject/14-178">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/saveProject/14-178" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3115,7 +3115,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-179">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-179" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3187,7 +3187,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-180">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-180" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3251,7 +3251,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects/14-181">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects/14-181" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3323,7 +3323,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/project/14/activities-182">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/project/14/activities-182" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3406,7 +3406,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-183">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-183" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3498,12 +3498,12 @@ if (total &gt;= 2) {
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Save_Editform">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Save_Editform" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-184">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-184" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3589,7 +3589,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-185">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/validation/project-name-185" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3675,7 +3675,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects/14-186">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects/14-186" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3757,7 +3757,7 @@ if (total &gt;= 2) {
               <stringProp name="RandomTimer.range">300.0</stringProp>
             </GaussianRandomTimer>
             <hashTree/>
-            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion">
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
               <stringProp name="JSON_PATH">$.data.name</stringProp>
               <stringProp name="EXPECTED_VALUE">Hostal management system project</stringProp>
               <boolProp name="JSONVALIDATION">false</boolProp>
@@ -3767,7 +3767,7 @@ if (total &gt;= 2) {
             </JSONPathAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewProjects-187">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/time/viewProjects-187" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3836,7 +3836,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-188">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-188" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3908,7 +3908,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-190">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-190" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -3972,7 +3972,7 @@ if (total &gt;= 2) {
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-189">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/time/projects-189" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -4088,12 +4088,12 @@ if (total &gt;= 2) {
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Logout">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Logout" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/auth/logout-192">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/auth/logout-192" enabled="true">
               <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
               <stringProp name="HTTPSampler.domain">${url}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
@@ -4171,7 +4171,7 @@ if (total &gt;= 2) {
               </GaussianRandomTimer>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/auth/login-193">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/auth/login-193" enabled="true">
               <stringProp name="TestPlan.comments">Detected a redirect from the previous sample</stringProp>
               <stringProp name="HTTPSampler.domain">${url}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
@@ -4244,7 +4244,7 @@ if (total &gt;= 2) {
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="103149417">login</stringProp>
                 </collectionProp>
@@ -4255,7 +4255,7 @@ if (total &gt;= 2) {
               </ResponseAssertion>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-194">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-194" enabled="true">
               <stringProp name="HTTPSampler.domain">${url}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -4327,7 +4327,7 @@ if (total &gt;= 2) {
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/images/ohrm_branding.png-195">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/images/ohrm_branding.png-195" enabled="true">
               <stringProp name="HTTPSampler.domain">${url}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -4399,7 +4399,7 @@ if (total &gt;= 2) {
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/images/ohrm_logo.png-196">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/images/ohrm_logo.png-196" enabled="true">
               <stringProp name="HTTPSampler.domain">${url}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
               <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -4551,7 +4551,7 @@ if (total &gt;= 2) {
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="vacancies" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="vacancies" enabled="false">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -4574,19 +4574,19 @@ if (total &gt;= 2) {
           <stringProp name="variableNames">Description</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller"/>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
         <hashTree>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Login-Include Controller">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Login-Include Controller" enabled="true">
             <stringProp name="IncludeController.includepath">E:\Jmeter-Final\jmeter-project\LoginFragment.jmx</stringProp>
           </IncludeController>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="click_Recruitment">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="click_Recruitment" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/recruitment/viewRecruitmentModule-1">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/recruitment/viewRecruitmentModule-1" enabled="true">
             <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
@@ -5505,7 +5505,7 @@ if (total &gt;= 2) {
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="click_vacancies">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="click_vacancies" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -6144,7 +6144,7 @@ if (total &gt;= 2) {
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="add_vacancies">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="add_vacancies" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -6442,7 +6442,7 @@ if (total &gt;= 2) {
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="save_vacancies">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="save_vacancies" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -7347,13 +7347,13 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             <hashTree/>
           </hashTree>
         </hashTree>
-        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller">
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
           <stringProp name="IfController.condition">${__groovy(Integer.parseInt(vars.get(&quot;loop&quot;)) == vars.getIteration())}</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Logout">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Logout" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -7715,7 +7715,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </hashTree>
           </hashTree>
         </hashTree>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -7752,13 +7752,13 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler">
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
           <boolProp name="displayJMeterProperties">false</boolProp>
           <boolProp name="displayJMeterVariables">true</boolProp>
           <boolProp name="displaySystemProperties">false</boolProp>
         </DebugSampler>
         <hashTree/>
-        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -7795,13 +7795,13 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer">
+        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
           <stringProp name="ConstantTimer.delay">300</stringProp>
           <stringProp name="RandomTimer.range">100.0</stringProp>
         </GaussianRandomTimer>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Candidates">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Candidates" enabled="false">
         <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -7816,17 +7816,17 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <collectionProp name="Arguments.arguments">
             <elementProp name="users" elementType="Argument">
               <stringProp name="Argument.name">users</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="loop" elementType="Argument">
               <stringProp name="Argument.name">loop</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="rampup" elementType="Argument">
               <stringProp name="Argument.name">rampup</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -7839,7 +7839,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           </IncludeController>
           <hashTree/>
         </hashTree>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Vacancy_Include Controller">
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Vacancy_Include Controller" enabled="true">
           <stringProp name="IncludeController.includepath">E:\Jmeter-Final\jmeter-project\Vacancy_Fragment.jmx</stringProp>
         </IncludeController>
         <hashTree/>
@@ -7848,7 +7848,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/recruitment/viewCandidates-42">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/recruitment/viewCandidates-42" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -7919,7 +7919,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="49586">200</stringProp>
               </collectionProp>
@@ -7935,7 +7935,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </GaussianRandomTimer>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-44">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-44" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -8636,7 +8636,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-53" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-53">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -8788,7 +8788,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="add_Candidates">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="add_Candidates" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -8864,7 +8864,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="3522941">save</stringProp>
               </collectionProp>
@@ -8952,7 +8952,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-59">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-59" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -9113,7 +9113,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-61">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-61" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -9355,7 +9355,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
               <stringProp name="JSONPostProcessor.defaultValues">Candidate id not found</stringProp>
             </JSONPostProcessor>
             <hashTree/>
-            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion">
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
               <stringProp name="JSON_PATH">$.data.firstName</stringProp>
               <stringProp name="EXPECTED_VALUE">Dharani</stringProp>
               <boolProp name="JSONVALIDATION">true</boolProp>
@@ -9720,7 +9720,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/actions/allowed-71">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/actions/allowed-71" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -10408,7 +10408,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81-81">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81-81" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -10471,7 +10471,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion">
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
               <stringProp name="JSON_PATH">$.data.status.label</stringProp>
               <stringProp name="EXPECTED_VALUE">Application Initiated</stringProp>
               <boolProp name="JSONVALIDATION">true</boolProp>
@@ -10492,7 +10492,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/shortlist-82" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/shortlist-82">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -10570,7 +10570,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/recruitment/addCandidate/81-83">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/recruitment/addCandidate/81-83" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -10917,7 +10917,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/actions/allowed-87">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/actions/allowed-87" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -11318,7 +11318,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/recruitment/changeCandidateVacancyStatus-94">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/recruitment/changeCandidateVacancyStatus-94" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -11416,7 +11416,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-95">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-95" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -11488,7 +11488,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-96">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-96" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -11857,7 +11857,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/shedule-interview-101" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/shedule-interview-101">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -12080,7 +12080,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-104">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-104" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -12505,7 +12505,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/history-110">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/recruitment/candidates/81/history-110" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -12674,7 +12674,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <boolProp name="IfController.useExpression">true</boolProp>
         </IfController>
         <hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Logout">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Logout" enabled="true">
             <boolProp name="TransactionController.parent">true</boolProp>
             <boolProp name="TransactionController.includeTimers">false</boolProp>
           </TransactionController>
@@ -12752,7 +12752,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
               </HeaderManager>
               <hashTree/>
             </hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/auth/login-193">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/auth/login-193" enabled="true">
               <stringProp name="TestPlan.comments">Detected a redirect from the previous sample</stringProp>
               <stringProp name="HTTPSampler.domain">${url}</stringProp>
               <stringProp name="HTTPSampler.port">${port}</stringProp>
@@ -12835,7 +12835,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
                 <intProp name="Assertion.test_type">2</intProp>
               </ResponseAssertion>
               <hashTree/>
-              <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer">
+              <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
                 <stringProp name="ConstantTimer.delay">1000</stringProp>
                 <stringProp name="RandomTimer.range">300.0</stringProp>
               </GaussianRandomTimer>
@@ -13136,8 +13136,45 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <stringProp name="RandomTimer.range">100.0</stringProp>
         </GaussianRandomTimer>
         <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Performance">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Performance" enabled="false">
         <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
         <stringProp name="ThreadGroup.ramp_time">${rampup}</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -13152,17 +13189,17 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <collectionProp name="Arguments.arguments">
             <elementProp name="users" elementType="Argument">
               <stringProp name="Argument.name">users</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="loop" elementType="Argument">
               <stringProp name="Argument.name">loop</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="rampup" elementType="Argument">
               <stringProp name="Argument.name">rampup</stringProp>
-              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -13170,7 +13207,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
         <hashTree/>
         <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller-Login"/>
         <hashTree>
-          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Login-Include Controller">
+          <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Login-Include Controller" enabled="true">
             <stringProp name="IncludeController.includepath">E:\Jmeter-Final\jmeter-project\LoginFragment.jmx</stringProp>
           </IncludeController>
           <hashTree/>
@@ -13184,7 +13221,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/performance/viewPerformanceModule-173">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/performance/viewPerformanceModule-173" enabled="true">
             <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
@@ -13335,7 +13372,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-175">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-175" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -13407,7 +13444,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/employees/reviews-176">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/employees/reviews-176" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -13525,7 +13562,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-179">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-179" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -13597,7 +13634,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/admin/job-titles-177">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/admin/job-titles-177" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -13673,7 +13710,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/admin/subunits-178">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/admin/subunits-178" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -13741,7 +13778,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/holidays-180">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/holidays-180" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -13820,7 +13857,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-181">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-181" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -13884,7 +13921,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-182">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-182" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -13956,7 +13993,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/holidays-183">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/holidays-183" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14036,12 +14073,12 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Manage_Reviews">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Manage_Reviews" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/performance/searchPerformanceReview-184">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/performance/searchPerformanceReview-184" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14113,7 +14150,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-185">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-185" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14185,7 +14222,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-186">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/pim/viewPhoto/empNumber/7-186" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14249,7 +14286,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/manage/reviews-187">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/manage/reviews-187" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14367,7 +14404,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-189">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-189" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14439,7 +14476,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/admin/job-titles-188">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/admin/job-titles-188" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14515,7 +14552,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/holidays-190">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/holidays-190" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14544,7 +14581,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="Sec-Fetch-Mode" elementType="Header">
                   <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
@@ -14594,7 +14631,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-191">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/workweek-191" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14666,7 +14703,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/holidays-192">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/leave/holidays-192" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -14746,7 +14783,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Add" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Add">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -15413,12 +15450,12 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Save">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Save" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/pim/employees-202">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/pim/employees-202" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -15494,7 +15531,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/supervisors-203">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/supervisors-203" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -15577,7 +15614,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/manage/reviews-204">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/manage/reviews-204" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -15733,7 +15770,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-206">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/core/i18n/messages-206" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -16371,7 +16408,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/pim/employees-214">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/pim/employees-214" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -16454,7 +16491,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/pim/employees-215">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/pim/employees-215" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -16537,7 +16574,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/manage/reviews-216">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/manage/reviews-216" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -16676,7 +16713,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Edit">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Click_Edit" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -17412,7 +17449,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/manage/reviews/21-229">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/web/index.php/api/v2/performance/manage/reviews/21-229" enabled="true">
             <stringProp name="HTTPSampler.domain">${url}</stringProp>
             <stringProp name="HTTPSampler.port">${port}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -18664,7 +18701,7 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer">
+        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
           <stringProp name="ConstantTimer.delay">300</stringProp>
           <stringProp name="RandomTimer.range">100.0</stringProp>
         </GaussianRandomTimer>
@@ -18854,80 +18891,124 @@ vars.put(&quot;vacancyDescription&quot;, randomDesc)
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>true</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <sentBytes>true</sentBytes>
-            <url>true</url>
-            <threadCounts>true</threadCounts>
-            <idleTime>true</idleTime>
-            <connectTime>true</connectTime>
-          </value>
-        </objProp>
-        <stringProp name="filename"></stringProp>
-      </ResultCollector>
-      <hashTree/>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>true</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <sentBytes>true</sentBytes>
-            <url>true</url>
-            <threadCounts>true</threadCounts>
-            <idleTime>true</idleTime>
-            <connectTime>true</connectTime>
-          </value>
-        </objProp>
-        <stringProp name="filename"></stringProp>
-      </ResultCollector>
-      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <stringProp name="ThreadGroup.num_threads">${users}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${loop}</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">${rampup}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="users" elementType="Argument">
+              <stringProp name="Argument.name">users</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="loop" elementType="Argument">
+              <stringProp name="Argument.name">loop</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="rampup" elementType="Argument">
+              <stringProp name="Argument.name">rampup</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Include Controller">
+          <stringProp name="IncludeController.includepath">E:\Jmeter-Final\jmeter-project\Time-fragment.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Include Controller">
+          <stringProp name="IncludeController.includepath">E:\Jmeter-Final\jmeter-project\candidate-fragment.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Include Controller">
+          <stringProp name="IncludeController.includepath">E:\Jmeter-Final\jmeter-project\Performance-fragment.jmx</stringProp>
+        </IncludeController>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
